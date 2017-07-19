@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121111</color>
+    <color name="colorPrimaryDark">#060606</color>
+    <color name="colorAccent">#203c07</color>
+    <color name="colorCompanyDropdown">#0e0e0e</color>
+    <color name="colorToolbar">#c0c2c2</color>
+    <color name="colorToolbarTitle">#f99306</color>
+    <color name="colorFirstColumn">#77a1cc</color>
+    <color name="colorSecondColumn">#bbc9f1</color>
+    <color name="colorListViewDivider">#264d44</color>
+    <color name="colorAdjustmentBtnBack">#6e9b4f</color>
+    <color name="colorAdjustmentNegBtnBack">#ef2522</color>
+    <color name="colorlockunlockback">#a9c298</color>
+    <color name="colorAdjustmentPickLocationBack">#8bc6e1</color>
+    <color name="colorAdjustmentButtonBack">#0da6ec</color>
+    <color name="colorWarehouseSubmitToastBack">#045378</color>
+    <color name="colorToast">#237804</color>
+    <color name="colorLookupListLeftLayout">#F88E38</color>
+    <color name="colorLookupListRightLayout">#F87B55</color>
+    <color name="colorSalesVariant">#F87B55</color>
+    <color name="colorOutboundPopUpText">#0968a3</color>
+    <color name="colorRedBackgrnd">#a32009</color>
+    <color name="colorBlueBackgrnd">#0968a3</color>
+    <color name="colorLoginText">#f00b1d4e</color>
+    <color name="colorSalesText">#f00b1d4e</color>
+    <color name="colorSalesVarantProdSlectText">#f0f5070b</color>
+    <color name="colorGreen">#f01b480e</color>
+    <color name="colorRed">#f0dc0724</color>
+
+</resources>

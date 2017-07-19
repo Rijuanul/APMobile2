@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/childLeftLayout"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/inboundChildQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+             />
+
+        <TextView
+            android:id="@+id/inboundChildProductLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            />
+
+        <TextView
+            android:id="@+id/inboundChildProductStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/inboundChildPositionn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/hiddenOrderDetId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/childRightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/inboundChildSku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            />
+
+        <TextView
+            android:id="@+id/inboundChildUpc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+             />
+
+        <TextView
+            android:id="@+id/inboundChildProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.advancepro.com.advancepro.AllSettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/outboundsettingsbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_border"
+                android:fontFamily="sans-serif"
+                android:text="Outbound" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="105dp"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/inboundsettingsbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_border"
+                android:fontFamily="sans-serif"
+                android:text="Inbound" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/lookupcyclecountsettingsbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_border"
+                android:fontFamily="sans-serif"
+                android:text="CycleCount and Lookup" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/settingscroolviewlayout"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/settingheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/settingcustomername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="Customer Name" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/settingproductname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="Product Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/settingorderqty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="Order Quantity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/settingorderdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Order Date" />
+
+                <RadioButton
+                    android:id="@+id/settingexpecteddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Expected Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/settingdrpdown"
+                    style="@android:style/Widget.Spinner.DropDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:dropDownWidth="match_parent"
+                    android:pointerIcon="hand"
+                    android:popupBackground="@color/colorAdjustmentPickLocationBack"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/settingasc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ascending" />
+
+                <RadioButton
+                    android:id="@+id/settingdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Descending" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/lookupcyclecountlayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/settingscroolviewlayout"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Cycle Count default search criteria" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/cyclecountsettingdrpdown"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:dropDownWidth="match_parent"
+                android:pointerIcon="hand"
+                android:popupBackground="@color/colorAdjustmentPickLocationBack"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Lookup default criteria" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/lookupsettingdrpdown"
+                style="@android:style/Widget.Spinner.DropDown"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:dropDownWidth="match_parent"
+                android:pointerIcon="hand"
+                android:popupBackground="@color/colorAdjustmentPickLocationBack"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/lookupcyclecountlayout"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/settingsave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorBlueBackgrnd"
+                android:fontFamily="sans-serif"
+                android:text="Save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/backsettingtohome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:text="Back" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

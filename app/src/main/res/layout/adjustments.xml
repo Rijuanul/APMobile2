@@ -1,0 +1,463 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="id.advancepro.com.advancepro.WarehouseActivity$PlaceholderFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/adjustmentscrollview"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/adjustmentlabellayout"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/adjustmentsheading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Adjustment is Positive"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentposbtnlayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/adjustmentlabellayout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/adjustmentposbtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAdjustmentBtnBack"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/adjustmentnegbtnlayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/adjustmentlabellayout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/adjustmentnegbtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@color/colorAdjustmentNegBtnBack"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentspossubmitlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentnegbtnlayout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/submitadjustmentspos"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorAdjustmentButtonBack"
+                    android:fontFamily="sans-serif"
+                    android:text="Add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentsnegsubmitlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentspossubmitlayout"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/submitadjustmentsneg"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorAdjustmentButtonBack"
+                    android:fontFamily="sans-serif"
+                    android:text="Reduce" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentssearchtextlayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/adjustmentsnegsubmitlayout"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/searchtextlayoutadjustments"
+                    android:orientation="vertical">
+                <EditText
+                    android:id="@+id/adjustmentssearchtext"
+                    android:layout_width="245dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_textview"
+                    android:hint="SKU/UPC"
+                    android:inputType="text"
+                    android:paddingLeft="5dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="105dp"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/searchtextlayoutadjustments"
+                    android:layout_toRightOf="@+id/searchtextlayoutadjustments"
+                    android:orientation="vertical">
+                    <Spinner
+                        android:id="@+id/adjustmentselectkey"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:dropDownWidth="match_parent"
+                        android:pointerIcon="hand"
+                        android:popupBackground="@color/colorAdjustmentPickLocationBack"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center"
+                        app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/adjustmentslocationlayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/adjustmentssearchtextlayout"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/adjustmentslocationtextfieldlayout"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/adjustmentslocationtxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:hint="Location"
+                        android:inputType="text"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/adjustmentslocationlayoutspinner"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_toEndOf="@+id/adjustmentssearchtextlayout"
+                    android:layout_toRightOf="@+id/adjustmentssearchtextlayout"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/adjustmentslocationdrpdwn"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:dropDownWidth="match_parent"
+                        android:pointerIcon="hand"
+                        android:popupBackground="@color/colorAdjustmentPickLocationBack"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center"
+                        app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustlocationlocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentslocationlayoutspinner"
+                    android:layout_toRightOf="@+id/adjustmentslocationlayoutspinner"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/lock1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustlocationunlocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustlocationlocklayout"
+                    android:layout_toRightOf="@+id/adjustlocationlocklayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/unlock1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentslotlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentslocationlayout"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/adjustmentslottextlayout"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/adjustmentslot"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text=""
+                        android:background="@drawable/rounded_textview"
+                        android:hint="Enter Lot #"
+                        android:inputType="text"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentslotlocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentslottextlayout"
+                    android:layout_toRightOf="@+id/adjustmentslottextlayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/lock1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentslotunlockimglayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentslotlocklayout"
+                    android:layout_toRightOf="@+id/adjustmentslotlocklayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/unlock1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentsseriallayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentslotlayout"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsserialtextlayout"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/adjustmentsserialtxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:hint="Enter Serial #"
+                        android:inputType="text"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsseriallocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsserialtextlayout"
+                    android:layout_toRightOf="@+id/adjustmentsserialtextlayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/lock1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsserialunlockimglayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsseriallocklayout"
+                    android:layout_toRightOf="@+id/adjustmentsseriallocklayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/unlock1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentstotalqtylayout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/adjustmentsseriallayout"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/adjustmentstotalqtytxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:focusable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentsqtylayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentstotalqtylayout"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsqtytextlayout"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/adjustmentqty"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:hint="Enter Quantity #"
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/adjustmentsreasontxt"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsqtyocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsqtytextlayout"
+                    android:layout_toRightOf="@+id/adjustmentsqtytextlayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/lock1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsqtyunlockimglayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsqtyocklayout"
+                    android:layout_toRightOf="@+id/adjustmentsqtyocklayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/unlock1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adjustmentsreasonlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adjustmentsqtylayout"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsreasontextlayout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/adjustmentsreasontxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_textview"
+                        android:hint="Enter Reason "
+                        android:inputType="text"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsreasonlocklayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsreasontextlayout"
+                    android:layout_toRightOf="@+id/adjustmentsreasontextlayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/lock1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adjustmentsreasonunlockimglayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@+id/adjustmentsreasonocklayout"
+                    android:layout_toRightOf="@+id/adjustmentsreasonocklayout"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="32dp"
+                        app:srcCompat="@drawable/unlock1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

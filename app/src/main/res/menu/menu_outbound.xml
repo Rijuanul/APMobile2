@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="id.advancepro.com.advancepro.OutboundActivity">
+
+    <item
+        android:id="@+id/outbound_backto_home"
+        android:icon="?attr/actionModeCloseDrawable"
+        android:orderInCategory="100"
+        android:title="Back"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/outbound_refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        app:showAsAction="always" />
+
+</menu>

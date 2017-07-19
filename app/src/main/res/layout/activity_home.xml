@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepageback"
+    tools:context="id.advancepro.com.advancepro.HomeActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menutoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/menutoolbar"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/inboundimae"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/btn_inbound" />
+
+        <TextView
+            android:id="@+id/textViewInbound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-70dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:inputType="text"
+            android:text=""
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/menutoolbar"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/linearLayout5"
+        android:layout_toRightOf="@+id/linearLayout5"
+        android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/outboundimage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/btn_outbound" />
+
+
+        <TextView
+            android:id="@+id/textViewOutbound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_alignLeft="@+id/linearLayout5"
+        android:layout_alignStart="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/warehouseimage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/btn_warehouse" />
+
+        <TextView
+            android:id="@+id/textViewWarehouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/linearLayout7"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/linearLayout6"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/lookupimage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/btn_lookup" />
+
+        <TextView
+            android:id="@+id/textviewlookup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Lookup"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/linearLayout6"
+        android:layout_toRightOf="@+id/linearLayout6"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/salesimage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/btn_lookup" />
+
+        <TextView
+            android:id="@+id/textviewsales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            android:fontFamily="sans-serif"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:text="Sales"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</RelativeLayout>

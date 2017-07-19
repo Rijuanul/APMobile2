@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="132dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/inboundheadersubitem_layout_border_firstcolumn"
+        android:focusable="false"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/outboundpotxt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/outboundorderno"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/outboundstatusid"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/outboundqtytxt"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/outbounddatetxt"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/inboundheadersubitem_layout_border_secondcolumn"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/outboundcompanytxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/outboundvendorNameScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:descendantFocusability="blocksDescendants"
+            android:fillViewport="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingTop="5dp"
+            android:scrollbarSize="10dp"
+            android:scrollbarStyle="insideOverlay"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/outboundvendornameandqtytxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+</LinearLayout>

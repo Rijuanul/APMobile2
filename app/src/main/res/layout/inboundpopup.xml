@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/inboundpopupclose"
+            style="@android:style/Widget.Button.Small"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Back"
+            android:background="@color/colorRedBackgrnd"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="@color/colorOutboundPopUpText"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Picking Location:"
+            android:fontFamily="sans-serif"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/inboundpickinglocationtxt"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_textview"
+                android:hint="Location"
+                android:inputType="text"
+                android:paddingLeft="5dp" />
+            </LinearLayout>/
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+        <Spinner
+            android:id="@+id/inboundpopuppicklocationdrpdwn"
+            style="@android:style/Widget.Spinner.DropDown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="match_parent"
+            android:pointerIcon="hand"
+            android:popupBackground="@color/colorAdjustmentPickLocationBack"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            app:popupTheme="@style/Base.Animation.AppCompat.DropDownUp" />
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inboundpopupskutxt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorOutboundPopUpText"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inboundpopupupctxt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorOutboundPopUpText"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inboundpopuptotalqtylabel"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorOutboundPopUpText"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/inboundpopupserialtxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_textview"
+                android:hint="Enter Serial #"
+                android:inputType="text"
+                android:paddingLeft="5dp" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopupseriallocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/lock1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopupseriaunlocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/unlock1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/inboundpopuplottxt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_textview"
+                android:hint="Enter Lot #"
+                android:inputType="text"
+                android:paddingLeft="5dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopuplotlocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/lock1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopuplotunlocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/unlock1" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/inboundpopupqtytxt"
+                android:layout_width="270dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_textview"
+                android:hint="Enter Quantity #"
+                android:inputType="number"
+                android:paddingLeft="5dp" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopupqtylocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/lock1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/inboundpopupqtyunlocklayout"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/unlock1" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/inboundpopupsubmit"
+            style="@android:style/Widget.Button.Small"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorBlueBackgrnd"
+            android:text="Complete the Lot/Serial" />
+    </LinearLayout>
+
+
+</LinearLayout>

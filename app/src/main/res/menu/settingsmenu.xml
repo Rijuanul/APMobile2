@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="id.advancepro.com.advancepro.HomeActivity">
+
+
+    <item
+        android:id="@+id/menuitemuser"
+        android:title=""
+        android:fontFamily="sans-serif"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menuitemdefaultwarehouse"
+        android:title=""
+        android:fontFamily="sans-serif"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuitemversion"
+        android:title="@string/mobile_version"
+        android:fontFamily="sans-serif"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/signout"
+        android:title="@string/signout"
+        android:fontFamily="sans-serif"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/changesettings"
+        android:title="@string/changesettings"
+        android:fontFamily="sans-serif"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/salesettings"
+        android:title="@string/salesettings"
+        android:fontFamily="sans-serif"
+        app:showAsAction="never" />
+
+
+</menu>

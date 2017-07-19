@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AdvancePro Inventory</string>
+    <string name="error001">Please Check Network Connection!</string>
+    <string name="error002">Incorrect webservice URL OR webservice unavailable</string>
+    <string name="error003">Could not connect to server!</string>
+    <string name="errorUserName">Enter UserName</string>
+    <string name="errorPassword">Enter Password</string>
+    <string name="errorSelectCompany">Select Company</string>
+    <string name="mobile_version">AP Mobile | V 2.0.1</string>
+    <string name="signout">SignOut</string>
+    <string name="signout_warning">Are you sure you want to signout</string>
+    <string name="title_activity_inbound">Inbound</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_look_up">LookUPActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="changesettings">Change Settings</string>
+    <string name="salesettings">Sale Settings</string>
+
+
+</resources>

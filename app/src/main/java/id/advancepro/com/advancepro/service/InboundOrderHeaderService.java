@@ -1,0 +1,71 @@
+package id.advancepro.com.advancepro.service;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import id.advancepro.com.advancepro.model.InboundOrderHeaderEntity;
+
+/**
+ * Created by TASIV on 4/3/2017.
+ */
+
+public class InboundOrderHeaderService {
+    InboundOrderHeaderEntity inboundOrderHeaderEntity=null;
+    public InboundOrderHeaderEntity getInboundOrderHeader(String urlLink){
+        HttpURLConnection connection = null;
+        BufferedReader reader = null;
+        try {
+            URL url = new URL(urlLink);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setConnectTimeout(1500);
+            connection.connect();
+            //System.out.println(urlLink);
+            //System.out.println(connection.getResponseCode() == 200);
+            if(connection.getResponseCode() == 200){
+                InputStream input = connection.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(input));
+                StringBuffer buffer = new StringBuffer();
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    //System.out.println(line);
+                    buffer.append(line);
+                }
+                String finalJson = buffer.toString();
+                JSONArray jsonarray = new JSONArray(finalJson);
+                if(jsonarray.length()>0) {
+                    inboundOrderHeaderEntity=new InboundOrderHeaderEntity();
+                    for (int i = 0; i < jsonarray.length(); i++) {
+                        JSONObject finalObject = jsonarray.getJSONObject(i);
+                        inboundOrderHeaderEntity.setOrderID(finalObject.getString("orderID"));
+                        inboundOrderHeaderEntity.setPurchaseno(finalObject.getString("Purchaseno"));
+                        inboundOrderHeaderEntity.setCompanyName(finalObject.getString("CompanyName"));
+                        inboundOrderHeaderEntity.setQuantityReceived(finalObject.getString("QuantityReceived"));
+                        inboundOrderHeaderEntity.setTotQuantity(finalObject.getString("TotQuantity"));
+                        inboundOrderHeaderEntity.setVpowhnotes(finalObject.getString("Vpowhnotes"));
+                        inboundOrderHeaderEntity.setErrorMessage(finalObject.getString("ErrorMessage"));
+                    }
+                }
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            connection.disconnect();
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return inboundOrderHeaderEntity;
+    }
+}
